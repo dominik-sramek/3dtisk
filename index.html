@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kompletní moderní průvodce světem 3D tisku. Zjistěte vše o technologii FDM, materiálech PLA a PETG, populárních tiskárnách i softwaru.">
+    <title>Svět 3D tisku | Moderní průvodce aditivní výrobou</title>
+    <!-- Odkaz na externí stylopis -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts pro moderní typografii -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==========================================
+         FIXNÍ HORNÍ NAVIGAČNÍ MENU (HEADER)
+         Zůstává viditelné při scrollování
+    =========================================== -->
+    <header class="site-header" id="hlavni-header">
+        <div class="header-container">
+            <a href="#domu" class="logo" aria-label="Návrat na začátek stránky">
+                <span class="logo-icon">
+                    <!-- SVG ikona trysky / krychle -->
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </span>
+                <span class="logo-text">3D<span class="highlight">TISK</span>.lab</span>
+            </a>
+
+            <!-- Tlačítko pro mobilní menu (hamburger) -->
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Přepnout navigační menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigační odkazy směřující na kotvy (ID) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#domu" class="nav-link active">Domů</a></li>
+                    <li class="nav-item"><a href="#o-tisku" class="nav-link">O 3D tisku</a></li>
+                    <li class="nav-item"><a href="#tiskarny" class="nav-link">Tiskárny</a></li>
+                    <li class="nav-item"><a href="#software" class="nav-link">Software</a></li>
+                    <li class="nav-item"><a href="#modely" class="nav-link">3D Modely</a></li>
+                    <li class="nav-item"><a href="#galerie" class="nav-link nav-btn">Galerie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================
+             SEKCE 1: #domu (HERO SEKCE)
+        =========================================== -->
+        <section class="hero-section" id="domu">
+            <div class="hero-background-glow glow-1"></div>
+            <div class="hero-background-glow glow-2"></div>
+            
+            <div class="container hero-content">
+                <div class="hero-split-grid">
+                    <div class="hero-text-col">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            <span>Revoluce v digitální a zakázkové výrobě</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Objevte nekonečný svět <span class="gradient-text">3D tisku</span> a digitální tvorby
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Od prvního nápadu na obrazovce přes přesné roztavení filamentu až po hotový mechanický prototyp. 
+                            Poznejte technologické principy FDM, ideální tiskové struny, legendární i moderní tiskárny a špičkový software.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#o-tisku" class="btn btn-primary">
+                                <span>Zjistit více</span>
+                                <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#tiskarny" class="btn btn-secondary">
+                                <span>Srovnání tiskáren</span>
+                            </a>
+                            <a href="#galerie" class="btn btn-tertiary">
+                                <span>Galerie výtisků</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image-col">
+                        <div class="hero-image-card">
+                            <img src="images/hero.jpg" alt="Detailní záběr na tiskovou trysku a tavení filamentu na 3D tiskárně" class="hero-img">
+                            <div class="hero-image-badge">
+                                <span class="live-dot"></span>
+                                <div>
+                                    <strong>FDM extruze v reálném čase</strong>
+                                    <span>Tryska: 215 °C | Podložka: 60 °C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Přehledové metriky v Hero sekci -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">0.05 mm</span>
+                        <span class="stat-label">Minimální výška vrstvy</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">300 °C</span>
+                        <span class="stat-label">Max. teplota trysky</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">600 mm/s</span>
+                        <span class="stat-label">Rychlost moderního tisku</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">100 %</span>
+                        <span class="stat-label">Svoboda designu</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SEKCE 2: #o-tisku (PRINCIP FDM A MATERIÁLY)
+        =========================================== -->
+        <section class="section o-tisku-section" id="o-tisku">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Základy technologie</span>
+                    <h2 class="section-title">Jak funguje FDM tisk a z čeho tiskneme?</h2>
+                    <p class="section-desc">
+                        FDM (Fused Deposition Modeling) je nejrozšířenější technologií 3D tisku na světě. 
+                        Zjistěte, jak se z plastové struny rodí pevné fyzické objekty a který materiál vybrat pro váš projekt.
+                    </p>
+                </div>
+
+                <!-- Princip FDM tisku -->
+                <div class="fdm-principle-card">
+                    <div class="fdm-content">
+                        <h3 class="card-title">Princip FDM / FFF technologie</h3>
+                        <p>
+                            FDM (někdy označováno jako FFF – <em>Fused Filament Fabrication</em>) je aditivní výrobní metoda. 
+                            Místo odebírání materiálu jako při frézování se materiál <strong>nanáší vrstvu po vrstvě</strong> (layer-by-layer).
+                        </p>
+                        <p>
+                            Termoplastická struna (filament o průměru obvykle 1.75 mm) je podávána pomocí podavače (extruderu) do vyhřívaného tavného bloku (hotend). 
+                            V trysce o průměru 0.4 mm se plast roztaví a je s mikrometrickou přesností nanášen na vyhřívanou tiskovou podložku (heatbed). 
+                            Pohyb v osách X, Y a Z řídí krokové motory podle instrukcí v G-kódu. Po vytlačení plast okamžitě tuhne a váže se na předchozí vrstvu.
+                        </p>
+                    </div>
+
+                    <!-- 4 kroky procesu -->
+                    <div class="fdm-steps-grid">
+                        <div class="step-item">
+                            <div class="step-num">01</div>
+                            <h4>Příprava modelu</h4>
+                            <p>3D virtuální model (STL, OBJ, STEP) je vytvořen v CAD programu nebo stažen z komunitní databáze.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">02</div>
+                            <h4>Slicování na vrstvy</h4>
+                            <p>Slicer rozřeže geometrii na horizontální vrstvy (typicky 0.1 až 0.28 mm) a spočítá dráhy pohybu trysky.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">03</div>
+                            <h4>Extruze a vrstvení</h4>
+                            <p>Tryska vyhřátá na 200–260 °C taví filament a přesně jej klade v souřadnicovém systému XYZ.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">04</div>
+                            <h4>Chlazení a fixace</h4>
+                            <p>Ofukový ventilátor okamžitě ochlazuje čerstvě položenou housenku plastu, čímž vzniká pevný monolit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailní rozbor materiálů: PLA vs PLA+ vs PETG -->
+                <div class="materials-wrapper">
+                    <div class="materials-banner-wrap">
+                        <img src="images/filament-spools.jpg" alt="Různobarevné cívky filamentů pro 3D tiskárny" class="materials-banner-img" loading="lazy">
+                        <div class="banner-caption">
+                            <strong>Termoplastické struny v praxi:</strong> Široká paleta barev a materiálů pro prototypování i funkční díly
+                        </div>
+                    </div>
+
+                    <div class="subsection-header">
+                        <h3>Srovnání materiálů: PLA, PLA+ a PETG</h3>
+                        <p>Volba správného filamentu rozhoduje o úspěchu tisku, odolnosti i vzhledu výsledného modelu.</p>
+                    </div>
+
+                    <div class="materials-grid">
+                        <!-- PLA -->
+                        <article class="material-card">
+                            <div class="material-badge pla-badge">Standard</div>
+                            <h4 class="material-name">PLA <small>(Polylactic Acid)</small></h4>
+                            <p class="material-desc">
+                                Biologicky odbouratelný termoplast vyráběný z rostlinného škrobu (např. kukuřice či cukrové třtiny). 
+                                Absolutní základ každého 3D tiskaře.
+                            </p>
+                            <ul class="material-specs">
+                                <li><strong>Teplota trysky:</strong> 190 – 215 °C</li>
+                                <li><strong>Teplota podložky:</strong> 50 – 60 °C</li>
+                                <li><strong>Tepelná odolnost:</strong> do ~55 °C</li>
+                                <li><strong>Vhodné pro:</strong> Prototypy, designové modely, figurky, hračky</li>
+                            </ul>
+                            <div class="pros-cons">
+                                <div class="pro"><span>+</span> Extrémně snadný tisk, minimální kroucení, bez zápachu</div>
+                                <div class="con"><span>−</span> Křehkost při nárazu, nízká teplotní odolnost (změkne v autě)</div>
+                            </div>
+                        </article>
+
+                        <!-- PLA+ -->
+                        <article class="material-card featured-material">
+                            <div class="material-badge plaplus-badge">Vylepšené</div>
+                            <h4 class="material-name">PLA+ <small>(Pro / Tough PLA)</small></h4>
+                            <p class="material-desc">
+                                Speciálně modifikovaná varianta standardního PLA s příměsí aditiv, která dramaticky zvyšují mechanickou houževnatost 
+                                a adhezi mezi jednotlivými vrstvami.
+                            </p>
+                            <ul class="material-specs">
+                                <li><strong>Teplota trysky:</strong> 205 – 225 °C</li>
+                                <li><strong>Teplota podložky:</strong> 55 – 65 °C</li>
+                                <li><strong>Tepelná odolnost:</strong> do ~60 °C</li>
+                                <li><strong>Vhodné pro:</strong> Polofunkční díly, krabičky na elektroniku, nářadí</li>
+                            </ul>
+                            <div class="pros-cons">
+                                <div class="pro"><span>+</span> O 50–100 % vyšší rázová houževnatost, hladší povrchový finiš</div>
+                                <div class="con"><span>−</span> Mírně vyšší tisková teplota, stále nevhodné na přímé letní slunce</div>
+                            </div>
+                        </article>
+
+                        <!-- PETG -->
+                        <article class="material-card">
+                            <div class="material-badge petg-badge">Funkční</div>
+                            <h4 class="material-name">PETG <small>(Polyethylene Terephthalate Glycol)</small></h4>
+                            <p class="material-desc">
+                                Kopolymer modifikovaný glykolem. Nabízí skvělou rovnováhu mezi snadným tiskem PLA 
+                                a mechanickou i chemickou houževnatostí technických materiálů (jako ABS).
+                            </p>
+                            <ul class="material-specs">
+                                <li><strong>Teplota trysky:</strong> 230 – 250 °C</li>
+                                <li><strong>Teplota podložky:</strong> 70 – 85 °C</li>
+                                <li><strong>Tepelná odolnost:</strong> do ~75 – 80 °C</li>
+                                <li><strong>Vhodné pro:</strong> Mechanické díly, držáky, venkovní použití, díly k tiskárně</li>
+                            </ul>
+                            <div class="pros-cons">
+                                <div class="pro"><span>+</span> Výborná rázová pevnost, UV odolnost, skvělá vazba vrstev</div>
+                                <div class="con"><span>−</span> Náchylnost na "vlášení" (stringing), vyžaduje sušení filamentu</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Rychlá srovnávací tabulka -->
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Vlastnost</th>
+                                    <th>PLA</th>
+                                    <th>PLA+</th>
+                                    <th>PETG</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Obtížnost tisku</td>
+                                    <td><span class="rating star-3">Velmi snadná</span></td>
+                                    <td><span class="rating star-3">Snadná</span></td>
+                                    <td><span class="rating star-2">Střední</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pevnost v ohybu & houževnatost</td>
+                                    <td>Střední (křehké)</td>
+                                    <td>Vysoká (pružnější)</td>
+                                    <td>Velmi vysoká</td>
+                                </tr>
+                                <tr>
+                                    <td>Odolnost vůči UV a počasí</td>
+                                    <td>Nízká</td>
+                                    <td>Mírná</td>
+                                    <td>Vysoká (ideální ven)</td>
+                                </tr>
+                                <tr>
+                                    <td>Kroucení při chladnutí (Warping)</td>
+                                    <td>Téměř žádné</td>
+                                    <td>Minimální</td>
+                                    <td>Nízké až mírné</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SEKCE 3: #tiskarny (PŘEDSTAVENÍ TISKÁREN)
+        =========================================== -->
+        <section class="section tiskarny-section" id="tiskarny">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Hardware přehled</span>
+                    <h2 class="section-title">Prověřené a populární 3D tiskárny</h2>
+                    <p class="section-desc">
+                        Výběr správné tiskárny závisí na vašem rozpočtu a ochotě se strojem experimentovat. 
+                        Podívejte se na trojici klíčových zástupců od cenové legendy po špičkový pracovní nástroj.
+                    </p>
+                </div>
+
+                <div class="printers-grid">
+                    <!-- Karta 1: Creality Ender-3 -->
+                    <article class="printer-card">
+                        <div class="printer-image-wrap">
+                            <img src="images/ender3.jpg" alt="3D tiskárna Creality Ender-3" class="printer-img" loading="lazy">
+                        </div>
+                        <div class="printer-card-header">
+                            <span class="printer-category">Cenový šampión & DIY ikona</span>
+                            <h3 class="printer-model">Creality Ender-3</h3>
+                            <div class="printer-price-tag">Cca 4 500 – 6 000 Kč</div>
+                        </div>
+                        <div class="printer-body">
+                            <p class="printer-summary">
+                                Tiskárna, která odstartovala globální boom domácího tisku. Základní otevřená konstrukce 
+                                vhodná pro každého, kdo se chce podrobně naučit mechaniku 3D tiskáren a postupně stroj vylepšovat.
+                            </p>
+                            
+                            <ul class="specs-list">
+                                <li>
+                                    <span class="spec-label">Tiskový prostor:</span>
+                                    <span class="spec-value">220 × 220 × 250 mm</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Typ extruderu:</span>
+                                    <span class="spec-value">Bowden (vzdálený motor)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Rychlost tisku:</span>
+                                    <span class="spec-value">50 – 80 mm/s</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Vyrovnávání podložky:</span>
+                                    <span class="spec-value">Manuální (ruční matice)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Hlavní přednost:</span>
+                                    <span class="spec-value">Obrovská komunita a levné díly</span>
+                                </li>
+                            </ul>
+
+                            <div class="printer-highlight">
+                                <strong>Vhodné pro:</strong> Začátečníky s omezeným rozpočtem, modeláře a kutily, kteří rádi tiskárnu sami ladí a upgradují.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Karta 2: Creality CR-10 SE -->
+                    <article class="printer-card featured-printer">
+                        <div class="card-ribbon">Rychlost & Inovace</div>
+                        <div class="printer-image-wrap">
+                            <img src="images/cr10-se.jpg" alt="Vysokorychlostní 3D tiskárna Creality CR-10 SE" class="printer-img" loading="lazy">
+                        </div>
+                        <div class="printer-card-header">
+                            <span class="printer-category">Moderní vysokorychlostní tisk</span>
+                            <h3 class="printer-model">Creality CR-10 SE</h3>
+                            <div class="printer-price-tag">Cca 9 000 – 11 500 Kč</div>
+                        </div>
+                        <div class="printer-body">
+                            <p class="printer-summary">
+                                Zástupce moderní éry rychlého tisku s lineárním vedením. Nabízí automatické kalibrační senzory, 
+                                přímý direct drive extruder a pokročilé chlazení pro tisk bez kompromisů v kvalitě.
+                            </p>
+                            
+                            <ul class="specs-list">
+                                <li>
+                                    <span class="spec-label">Tiskový prostor:</span>
+                                    <span class="spec-value">220 × 220 × 265 mm</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Typ extruderu:</span>
+                                    <span class="spec-value">Sprite Direct Drive (dvoupřevod)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Rychlost tisku:</span>
+                                    <span class="spec-value">Až 600 mm/s (zrychlení 8000 mm/s²)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Vyrovnávání podložky:</span>
+                                    <span class="spec-value">Plně automatické (CR Touch + tenzometr)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Vedení os:</span>
+                                    <span class="spec-value">Kvalitní ocelové lineární kolejnice</span>
+                                </li>
+                            </ul>
+
+                            <div class="printer-highlight">
+                                <strong>Vhodné pro:</strong> Uživatele vyžadující vysokou tiskovou rychlost, bezstarostný auto-leveling a spolehlivý tisk flexibilních TPU materiálů.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Karta 3: Original Prusa MK4 -->
+                    <article class="printer-card">
+                        <div class="printer-image-wrap">
+                            <img src="images/prusa.jpg" alt="3D tiskárna Original Prusa MK4" class="printer-img" loading="lazy">
+                        </div>
+                        <div class="printer-card-header">
+                            <span class="printer-category">Evropská špička & Spolehlivost</span>
+                            <h3 class="printer-model">Original Prusa MK4</h3>
+                            <div class="printer-price-tag">Cca 20 000 – 26 000 Kč</div>
+                        </div>
+                        <div class="printer-body">
+                            <p class="printer-summary">
+                                Vlajková loď pražské firmy Prusa Research. Synonymum pro maximální stabilitu, 
+                                precizní odladěné tiskové profily a dokonalou první vrstvu bez nutnosti jakéhokoli manuálního ladění.
+                            </p>
+                            
+                            <ul class="specs-list">
+                                <li>
+                                    <span class="spec-label">Tiskový prostor:</span>
+                                    <span class="spec-value">250 × 210 × 220 mm</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Typ extruderu:</span>
+                                    <span class="spec-value">Nextruder s rychlovýměnnou tryskou</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Elektronika:</span>
+                                    <span class="spec-value">Vlastní 32bit xBuddy deska s Input Shapingem</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Vyrovnávání podložky:</span>
+                                    <span class="spec-value">Tenzometrický senzor (Loaded cell)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label">Podložka:</span>
+                                    <span class="spec-value">Magnetický pružný ocelový plát (PEI)</span>
+                                </li>
+                            </ul>
+
+                            <div class="printer-highlight">
+                                <strong>Vhodné pro:</strong> Profesionály, konstrukční kanceláře, školy i nadšence, kteří chtějí spolehlivý pracovní nástroj s nepřetržitou zákaznickou podporou 24/7.
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SEKCE 4: #software (MODELOVÁNÍ A PŘÍPRAVA TISKU)
+        =========================================== -->
+        <section class="section software-section" id="software">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Digitální workflow</span>
+                    <h2 class="section-title">Software pro 3D modelování a přípravu tisku</h2>
+                    <p class="section-desc">
+                        Cesta od myšlenky k hotovému tisku má dvě klíčové softwarové fáze: 
+                        nejprve vytvoření 3D tělesa v modelovacím softwaru a následně jeho rozřezání ve sliceru.
+                    </p>
+                </div>
+
+                <!-- Vizuální banner pracovní stanice CAD -->
+                <div class="software-media-banner">
+                    <img src="images/cad-software.jpg" alt="Pracovní stanice s 3D CAD modelováním" class="software-banner-img" loading="lazy">
+                    <div class="software-banner-caption">
+                        <span>Digitální pipeline: Od 3D CAD parametrického návrhu součásti po rozřezání na vrstvy ve sliceru</span>
+                    </div>
+                </div>
+
+                <div class="software-dual-layout">
+                    <!-- Sloupec 1: 3D Modelovací programy -->
+                    <div class="software-column">
+                        <div class="column-header">
+                            <div class="col-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="col-title">1. Tvorba 3D modelů (CAD / Mesh)</h3>
+                                <p class="col-subtitle">Nástroje pro navrhování technických součástí i organických tvarů</p>
+                            </div>
+                        </div>
+
+                        <div class="software-list">
+                            <!-- Fusion 360 -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">Autodesk Fusion 360</h4>
+                                    <span class="sw-tag">Parametrický CAD</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Profesionální cloudový nástroj s plnou historií úprav. Umožňuje přesné technické skicování, parametrické vazby, simulace namáhání a sestavy složité mechaniky. Pro kutily a studenty zdarma.
+                                </p>
+                            </div>
+
+                            <!-- Tinkercad -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">Tinkercad</h4>
+                                    <span class="sw-tag">Webový začátek</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Skvělý intuitivní prohlížečový CAD od Autodesku. Funguje na principu skládání a odečítání základních geometrických těles (kvádry, válce). Ideální pro školáky a rychlé jednoduché úpravy.
+                                </p>
+                            </div>
+
+                            <!-- OpenSCAD -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">OpenSCAD</h4>
+                                    <span class="sw-tag">Kódový CAD</span>
+                                </div>
+                                <p class="sw-desc">
+                                    CAD pro programátory. Model se nevytváří myší, nýbrž zápisem skriptu (Constructive Solid Geometry). Perfektní pro generování plně parametrických modelů, ozubených kol či krabiček s proměnnými rozměry.
+                                </p>
+                            </div>
+
+                            <!-- Blender -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">Blender</h4>
+                                    <span class="sw-tag">Organický Sculpting</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Legendární open-source balík pro organické modelování, digitální sochaření (sculpting) a úpravu polygonových sítí. Nepostradatelný při tvorbě herních figurek, soch a komplexních uměleckých děl.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sloupec 2: Slicery (Příprava tisku) -->
+                    <div class="software-column">
+                        <div class="column-header">
+                            <div class="col-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="col-title">2. Slicery (Generování G-kódu)</h3>
+                                <p class="col-subtitle">Programy pro rozřezání geometrie na tiskové instrukce</p>
+                            </div>
+                        </div>
+
+                        <div class="software-list">
+                            <!-- PrusaSlicer -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">PrusaSlicer</h4>
+                                    <span class="sw-tag sw-tag-popular">Nejpopulárnější</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Špičkový open-source slicer vyvíjený komunitou kolem Prusa Research. Přináší revoluční organické (stromové) podpory, štětce pro ruční umístění švů, proměnnou výšku vrstvy a profily pro desítky tiskáren různých značek.
+                                </p>
+                            </div>
+
+                            <!-- Creality Print -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">Creality Print</h4>
+                                    <span class="sw-tag">Creality ekosystém</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Dedikovaný slicer optimalizovaný pro novou generaci vysokorychlostních tiskáren řady Ender, CR a K1. Nabízí přímé odesílání tiskových úloh přes Wi-Fi a vzdálený monitoring přes Creality Cloud.
+                                </p>
+                            </div>
+
+                            <!-- Ultimaker Cura -->
+                            <div class="software-item">
+                                <div class="sw-header-row">
+                                    <h4 class="sw-title">Ultimaker Cura</h4>
+                                    <span class="sw-tag">Globální standard</span>
+                                </div>
+                                <p class="sw-desc">
+                                    Jeden z nejstarších a nejrobustnějších slicerů na trhu. Obsahuje stovky podrobných tiskových parametrů, rozsáhlé tržiště rozšiřujících pluginů a univerzální profily prakticky pro každou existující FDM tiskárnu.
+                                </p>
+                            </div>
+
+                            <!-- Infobox o Slicingu -->
+                            <div class="slicer-tip-box">
+                                <div class="tip-badge">TIP PRO PRAXI</div>
+                                <p>
+                                    <strong>Co vlastně slicer dělá?</strong> Po načtení 3D tělesa vypočítá tloušťku obvodů (perimetrů), vnitřní mřížku (infill – typicky 15–25 %) a vygeneruje soubor <code>.gcode</code> obsahující přesné teploty, rychlosti a tisíce souřadnic G1 X... Y... E...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SEKCE 5: #modely (KNIHOVNY A ARCHIVY 3D MODELŮ)
+        =========================================== -->
+        <section class="section modely-section" id="modely">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Knihovny & komunitní archivy</span>
+                    <h2 class="section-title">Kde hledat hotové 3D modely?</h2>
+                    <p class="section-desc">
+                        Nemusíte hned modelovat všechno od nuly. Pokud hledáte inspiraci, praktické zlepšováky 
+                        do dílny, náhradní díly nebo dekorace, vyzkoušejte největší celosvětové archivy ověřené tiskařskou komunitou.
+                    </p>
+                </div>
+
+                <!-- Mřížka archivů 3D modelů -->
+                <div class="models-grid">
+                    <!-- 1. Printables.com -->
+                    <article class="model-card featured-repo">
+                        <div class="repo-header">
+                            <div class="repo-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="repo-creator">Prusa Research</span>
+                                <h3 class="repo-title">Printables.com</h3>
+                            </div>
+                            <span class="repo-badge prusa-badge">Ověřené tisky</span>
+                        </div>
+                        <p class="repo-desc">
+                            Jedna z nejpopulárnějších a nejrychleji rostoucích platforem. Klade obrovský důraz na kvalitu, 
+                            reálné fotografie hotových výtisků od uživatelů („Makes“) a předpřipravené tiskové profily ve formátu 3MF.
+                        </p>
+                        <ul class="repo-features">
+                            <li><strong>Klíčová výhoda:</strong> Žádný nekvalitní spam, propracované soutěže pro designéry</li>
+                            <li><strong>Podporované formáty:</strong> 3MF, STL, STEP, G-code</li>
+                            <li><strong>Odměny:</strong> Systém Prusametrů směnitelných za cívky filamentu zdarma</li>
+                        </ul>
+                        <div class="repo-footer">
+                            <a href="https://www.printables.com" target="_blank" rel="noopener noreferrer" class="btn-repo">
+                                <span>Navštívit Printables.com</span>
+                                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 2. Thingiverse.com -->
+                    <article class="model-card">
+                        <div class="repo-header">
+                            <div class="repo-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="repo-creator">UltiMaker</span>
+                                <h3 class="repo-title">Thingiverse.com</h3>
+                            </div>
+                            <span class="repo-badge standard-badge">Největší archiv</span>
+                        </div>
+                        <p class="repo-desc">
+                            Historicky nejstarší a objemem stále nejrozsáhlejší bezplatný archiv 3D modelů na světě. 
+                            Najdete zde doslova miliony souborů od technických náhradních dílů a modifikací tiskáren až po kuriozity.
+                        </p>
+                        <ul class="repo-features">
+                            <li><strong>Klíčová výhoda:</strong> Bezkonkurenční množství modelů pro libovolný myslitelný účel</li>
+                            <li><strong>Podporované formáty:</strong> STL, OBJ, Thing</li>
+                            <li><strong>Komunita:</strong> Silný koncept „Remixů“ umožňující vylepšovat cizí návrhy</li>
+                        </ul>
+                        <div class="repo-footer">
+                            <a href="https://www.thingiverse.com" target="_blank" rel="noopener noreferrer" class="btn-repo">
+                                <span>Navštívit Thingiverse.com</span>
+                                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 3. MakerWorld.com -->
+                    <article class="model-card">
+                        <div class="repo-header">
+                            <div class="repo-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="repo-creator">Bambu Lab</span>
+                                <h3 class="repo-title">MakerWorld.com</h3>
+                            </div>
+                            <span class="repo-badge modern-badge">Moderní profily</span>
+                        </div>
+                        <p class="repo-desc">
+                            Nová generace komunitní platformy stavěná na maximální jednoduchost. Modely jsou publikovány 
+                            včetně kompletně odladěných tiskových parametrů a barevných vrstev pro vícemateriálový tisk.
+                        </p>
+                        <ul class="repo-features">
+                            <li><strong>Klíčová výhoda:</strong> Tisk na jedno kliknutí z mobilní aplikace i počítače</li>
+                            <li><strong>Podporované formáty:</strong> 3MF (včetně konfigurací sliceru), STL, STEP</li>
+                            <li><strong>Webový náhled:</strong> Plynulá 3D vizualizace přímo v prohlížeči bez stahování</li>
+                        </ul>
+                        <div class="repo-footer">
+                            <a href="https://makerworld.com" target="_blank" rel="noopener noreferrer" class="btn-repo">
+                                <span>Navštívit MakerWorld.com</span>
+                                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 4. Thangs.com -->
+                    <article class="model-card">
+                        <div class="repo-header">
+                            <div class="repo-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="repo-creator">Physna</span>
+                                <h3 class="repo-title">Thangs.com</h3>
+                            </div>
+                            <span class="repo-badge ai-badge">AI vyhledávač</span>
+                        </div>
+                        <p class="repo-desc">
+                            Technologicky nejpokročilejší 3D vyhledávač na trhu. Funguje jako Google pro trojrozměrný prostor – 
+                            umožňuje nahrát existující 3D model a nalézt tvarově podobné geometrie napříč desítkami webů.
+                        </p>
+                        <ul class="repo-features">
+                            <li><strong>Klíčová výhoda:</strong> Geometrické prohledávání více repozitářů současně</li>
+                            <li><strong>Podporované formáty:</strong> STL, OBJ, STEP, GLTF, FBX</li>
+                            <li><strong>Správa verzí:</strong> Sledování revizí a kolaborativní práce na modelech</li>
+                        </ul>
+                        <div class="repo-footer">
+                            <a href="https://thangs.com" target="_blank" rel="noopener noreferrer" class="btn-repo">
+                                <span>Navštívit Thangs.com</span>
+                                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Tipy při stahování modelů -->
+                <div class="models-tips-box">
+                    <div class="tips-box-header">
+                        <span class="tip-icon">💡</span>
+                        <h4>Na co si dát pozor při stahování hotových modelů?</h4>
+                    </div>
+                    <div class="tips-columns">
+                        <div class="tip-col">
+                            <strong>Licence (Creative Commons):</strong>
+                            <p>Vždy zkontrolujte licenční štítek. Licence <code>CC-BY-NC</code> zakazuje komerční prodej výtisků, zatímco <code>CC-0</code> nebo <code>Public Domain</code> vám dává úplnou svobodu.</p>
+                        </div>
+                        <div class="tip-col">
+                            <strong>Orientace a podpory:</strong>
+                            <p>Čtěte poznámky autora (Print Instructions). Mnoho modelů je navrženo tak, aby se tiskly bez podpor, ale vyžadují správné natočení na podložce.</p>
+                        </div>
+                        <div class="tip-col">
+                            <strong>Volba formátu (STL vs 3MF):</strong>
+                            <p>Pokud je k dispozici soubor <code>.3mf</code> nebo <code>.step</code>, dejte mu přednost před starým <code>.stl</code>. Obsahuje přesnější geometrii i nastavení výplně a perimetrů.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SEKCE 6: #galerie (FOTOGALERIE 3D VÝTISKŮ)
+        =========================================== -->
+        <section class="section galerie-section" id="galerie">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Vizuální inspirace</span>
+                    <h2 class="section-title">Galerie a reálné ukázky 3D tisku</h2>
+                    <p class="section-desc">
+                        Prohlédněte si, co všechno lze na moderních FDM tiskárnách vyrobit – od celosvětově známé 
+                        kalibrační lodičky 3DBenchy přes průmyslové tiskové farmy až po komplexní umělecké skulptury.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Foto 1: 3DBenchy -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="images/benchy.jpg" alt="3DBenchy - ikonická kalibrační lodička pro 3D tiskárny" class="gallery-img" loading="lazy">
+                            <span class="gallery-tag">Kalibrace & Test</span>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>3DBenchy – Etalon 3D tiskařů</h4>
+                            <p>Legendární testovací loďka prověřující geometrii, mosty (bridging), převisy i chlazení filamentu. Vytiskne ji každý novopečený tiskař pro jemné doladění stroje.</p>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2: Tisková farma -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="images/print-farm.jpg" alt="3D tisková farma v plném provozu" class="gallery-img" loading="lazy">
+                            <span class="gallery-tag">Průmysl & Série</span>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>3D tisková farma v praxi</h4>
+                            <p>Ukázka moderní sériové aditivní výroby. Desítky propojených FDM tiskáren dokážou nahradit vstřikolis a vyrábět stovky hotových dílů denně bez drahých forem.</p>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3: Barevný a detailní tisk -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="images/gallery-2.jpg" alt="Barevný a detailní 3D tisk" class="gallery-img" loading="lazy">
+                            <span class="gallery-tag">Design & Kreativita</span>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Vícebarevné a detailní výtisky</h4>
+                            <p>S moderními multi-materiálovými systémy lze přímo během tisku střídat barvy i různé druhy filamentů, což otevírá dveře pro dekorace, funkční štítky a hračky.</p>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4: Komplexní geometrické těleso -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrap">
+                            <img src="images/gallery-3.jpg" alt="Komplexní socha a geometrický 3D model" class="gallery-img" loading="lazy">
+                            <span class="gallery-tag">Organický design</span>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Složité prostorové skulptury</h4>
+                            <p>Výrobky s vnitřními dutinami, tenkými žebry a topologickou optimalizací, které by nebylo možné vyrobit žádnou tradiční obráběcí metodou (frézování, lití).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         PATIČKA STRÁNKY (FOOTER)
+    =========================================== -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#domu" class="logo">
+                    <span class="logo-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </span>
+                    <span class="logo-text">3D<span class="highlight">TISK</span>.lab</span>
+                </a>
+                <p class="footer-tagline">
+                    Moderní průvodce světem aditivní výroby, 3D modelování a technologií budoucnosti.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h5>Navigace</h5>
+                    <ul>
+                        <li><a href="#domu">Domů</a></li>
+                        <li><a href="#o-tisku">O 3D tisku</a></li>
+                        <li><a href="#tiskarny">Tiskárny</a></li>
+                        <li><a href="#software">Software</a></li>
+                        <li><a href="#modely">3D Modely</a></li>
+                        <li><a href="#galerie">Galerie výtisků</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Témata</h5>
+                    <ul>
+                        <li><a href="#o-tisku">Princip FDM tavení</a></li>
+                        <li><a href="#o-tisku">Materiály PLA vs PETG</a></li>
+                        <li><a href="#tiskarny">Creality vs Prusa</a></li>
+                        <li><a href="#software">CAD modelování & Slicery</a></li>
+                        <li><a href="#modely">Knihovny modelů (Printables)</a></li>
+                        <li><a href="#galerie">Testovací výtisky (3DBenchy)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-back-to-top">
+                <a href="#domu" class="btn-scroll-top" aria-label="Zpět nahoru">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                    <span>Zpět nahoru</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 3D TISK LAB. Všechna práva vyhrazena. Vytvořeno pomocí sémantického HTML5 & CSS3.</p>
+                <p class="tech-note">Plynulé scrollování a responzivní design bez závislostí.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Volitelný lehký JavaScript pro interaktivitu a mobilní menu -->
+    <script src="script.js"></script>
+</body>
+</html>
