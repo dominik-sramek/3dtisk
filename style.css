@@ -1368,6 +1368,7 @@ img, svg {
     font-size: 1.5rem;
 }
 
+.tips-box-header h3,
 .tips-box-header h4 {
     font-size: 1.25rem;
     font-weight: 800;
@@ -1476,6 +1477,7 @@ img, svg {
     flex-grow: 1;
 }
 
+.gallery-info h3,
 .gallery-info h4 {
     font-size: 1.3rem;
     font-weight: 800;
@@ -1520,6 +1522,7 @@ img, svg {
     gap: 2rem;
 }
 
+.footer-col h4,
 .footer-col h5 {
     font-size: 0.9rem;
     font-weight: 700;
@@ -1585,6 +1588,158 @@ img, svg {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+/* W3C Nu Html Checker karta v zápatí */
+.footer-validator-container {
+    margin-bottom: 2.5rem;
+}
+
+.validator-card {
+    background: rgba(19, 28, 49, 0.7);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-fast);
+}
+
+.validator-card:hover {
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.2);
+}
+
+.validator-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.validator-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.validator-badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--color-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.validator-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.validator-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.validator-subtitle {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.validator-subtitle code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--color-primary-light);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+.validator-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+}
+
+.validator-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.validator-info-text {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    max-width: 680px;
+}
+
+.validator-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-accent-green);
+    color: #032b1d;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.validator-link-btn:hover {
+    background: #34d399;
+    color: #021a11;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+}
+
+/* Rychlý odkaz v liště patičky */
+.footer-quick-validator a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.83rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-quick-validator a:hover {
+    color: var(--color-accent-green);
+}
+
+.check-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent-green);
+    display: inline-block;
+    box-shadow: 0 0 8px var(--color-accent-green);
 }
 
 /* --------------------------------------------------------------------------
@@ -1786,6 +1941,15 @@ img, svg {
 
     .models-tips-box {
         padding: 1.5rem 1.25rem;
+    }
+
+    .validator-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .validator-link-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 

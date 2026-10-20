@@ -60,7 +60,7 @@ Nepotřebujete žádný webový server ani instalaci závislostí – vše fungu
    - **3D tisková farma:** Průmyslová hromadná výroba na desítkách FDM tiskáren.
    - **Barevný tisk:** Moderní vícebarevné modely a hračky.
    - **Komplexní skulptury:** Prostorové geometrické struktury s topologickou optimalizací.
-   - Plnohodnotná patička (footer) s doplňkovými odkazy na všechny sekce a tlačítkem "Zpět nahoru".
+   - Plnohodnotná patička (footer) s doplňkovými odkazy na všechny sekce, tlačítkem "Zpět nahoru" a interaktivním panelem s odkazem na online validátor W3C Nu Html Checker.
 
 ---
 
